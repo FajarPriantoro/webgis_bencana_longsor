@@ -1,0 +1,306 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+:root {
+  --green: #1e40af;     /* Biru Tua Tegas */
+  --green2: #3b82f6;    /* Biru Terang */
+  --emerald: #60a5fa;   /* Biru Langit Cerah */
+  --bg: #f0f4f8;        /* Abu-abu Kebiruan Soft */
+  --card: #ffffff;      /* Putih Bersih */
+  --text: #0f172a;      /* Hitam Kebiruan Sangat Gelap */
+  --muted: #475569;     /* Abu-abu Redup */
+  --border: #cbd5e1;    /* Abu-abu Terang */
+}  
+
+
+body{
+  font-family:'Times New Roman', Times, serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(135deg,var(--green),#145c3c);
+  color:white;
+  padding:0 2rem;
+  height:64px;
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  position:sticky;
+  top:0;
+  z-index:999;
+}
+
+.logo{
+  font-size:1.2rem;
+  font-weight:800;
+}
+
+.logo span{
+  color:var(--emerald);
+}
+
+.sub{
+  margin-left:auto;
+  font-size:.75rem;
+}
+
+/* PAGE */
+.page{
+  max-width:1400px;
+  margin:auto;
+  padding:1.5rem;
+}
+
+/* PROFILE */
+.profile-card{
+  background:white;
+  border-radius:20px;
+  padding:1.5rem 2rem;
+  display:flex;
+  gap:2rem;
+  align-items:center;
+  box-shadow:0 2px 16px rgba(0,0,0,.06);
+  margin-bottom:1.5rem;
+}
+
+.profile-avatar-wrap{
+  position:relative;
+  cursor:pointer;
+}
+
+.profile-avatar{
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  overflow:hidden;
+  background:linear-gradient(135deg,var(--green2),var(--emerald));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:2rem;
+  font-weight:800;
+}
+
+.profile-avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.avatar-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.4);
+  color:white;
+  border-radius:50%;
+  opacity:0;
+  transition:.2s;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.profile-avatar-wrap:hover .avatar-overlay{
+  opacity:1;
+}
+
+#photoInput{
+  display:none;
+}
+
+.profile-info h1{
+  font-size:1.5rem;
+}
+
+.meta{
+  display:flex;
+  gap:1rem;
+  margin-top:.5rem;
+  flex-wrap:wrap;
+}
+
+.meta-item label{
+  font-size:.7rem;
+  color:gray;
+}
+
+.meta-item span{
+  font-weight:bold;
+}
+
+.profile-badge{
+  margin-left:auto;
+  background:linear-gradient(135deg,var(--green2),var(--emerald));
+  color:white;
+  padding:.8rem 1rem;
+  border-radius:50px;
+  text-align:center;
+}
+
+/* STATS */
+.stats-row{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:1rem;
+  margin-bottom:1.5rem;
+}
+
+.stat-card{
+  background:white;
+  border-radius:16px;
+  padding:1rem;
+  display:flex;
+  gap:1rem;
+  align-items:center;
+}
+
+.stat-icon{
+  width:44px;
+  height:44px;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* MAIN GRID */
+.main-grid{
+  display:grid;
+  grid-template-columns:1fr 350px;
+  gap:1rem;
+  margin-bottom:1.5rem;
+}
+
+.map-card,
+.table-panel,
+.chart-card{
+  background:white;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 2px 16px rgba(0,0,0,.06);
+}
+
+.card-header{
+  padding:1rem;
+  border-bottom:1px solid #eee;
+}
+
+.card-title{
+  font-weight:800;
+}
+
+#map{
+  height:500px;
+}
+
+/* FILTER */
+.filter-bar{
+  display:flex;
+  gap:.5rem;
+  margin-top:.7rem;
+  flex-wrap:wrap;
+}
+
+.filter-btn{
+  border:none;
+  padding:.4rem .8rem;
+  border-radius:50px;
+  cursor:pointer;
+  background:#e5e7eb;
+}
+
+.filter-btn.active{
+  background:var(--green);
+  color:white;
+}
+
+/* SEARCH */
+.search-bar{
+  padding:1rem;
+  display:flex;
+  gap:.5rem;
+}
+
+.search-bar input{
+  width:100%;
+  padding:.5rem;
+}
+
+/* LIST */
+.school-list{
+  max-height:500px;
+  overflow-y:auto;
+}
+
+.school-item{
+  padding:1rem;
+  border-bottom:1px solid #eee;
+  cursor:pointer;
+}
+
+.school-item:hover{
+  background:#f8fafc;
+}
+
+.school-name{
+  font-weight:700;
+}
+
+.school-meta{
+  font-size:.8rem;
+  color:gray;
+}
+
+/* CHART */
+.charts-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1rem;
+}
+
+.chart-card{
+  padding:1.2rem;
+}
+
+.chart-title{
+  margin-bottom:1rem;
+}
+
+footer{
+  text-align:center;
+  padding:1.5rem;
+  color:gray;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+  .stats-row{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .main-grid{
+    grid-template-columns:1fr;
+  }
+
+  .charts-row{
+    grid-template-columns:1fr;
+  }
+
+  .profile-card{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .profile-badge{
+    margin:auto;
+  }
+}

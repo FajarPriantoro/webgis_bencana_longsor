@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGIS Kerawanan Longsor Lampung</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        Web<span>GIS</span> Dashboard
+    </div>
+
+    <div class="sub">
+        Tugas WebGIS · Universitas Lampung
+    </div>
+</header>
+
+<div class="page">
+
+    <div class="profile-card">
+
+        <div class="profile-avatar-wrap">
+            <div class="profile-avatar">
+                <img src="Foto.JPG" alt="Foto Profil">
+            </div>
+        </div>
+
+        <div class="profile-info">
+            <h1>Fajar Priantoro</h1>
+
+            <div class="meta">
+
+                <div class="meta-item">
+                    <label>NPM</label>
+                    <span>2313034018</span>
+                </div>
+
+                <div class="meta-item">
+                    <label>Program Studi</label>
+                    <span>Pendidikan Geografi</span>
+                </div>
+
+                <div class="meta-item">
+                    <label>Universitas</label>
+                    <span>Universitas Lampung</span>
+                </div>
+
+                <div class="meta-item">
+                    <label>Mata Kuliah</label>
+                    <span>Perancangan WebGIS</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="profile-badge">
+            📍 WebGIS<br>Provinsi Lampung
+        </div>
+
+    </div>
+
+    <div class="main-grid">
+
+        <div class="map-card">
+
+            <div class="card-header">
+
+                <div class="card-title">
+                    🗺 Peta Kerawanan Longsor Provinsi Lampung
+                </div>
+
+                <div class="filter-bar">
+                    <button class="filter-btn active">Semua</button>
+                    <button class="filter-btn">Tidak Berpotensi</button>
+                    <button class="filter-btn">Berpotensi Sedang</button>
+                    <button class="filter-btn">Berpotensi Tinggi</button>
+                </div>
+
+            </div>
+
+            <div id="map"></div>
+
+        </div>
+
+        <div class="table-panel">
+
+            <div class="card-header">
+                <div class="card-title">
+                    📋 Daftar Wilayah
+                </div>
+            </div>
+
+            <div class="search-bar">
+                <span>🔍</span>
+                <input type="text"
+                    placeholder="Cari Kabupaten/Kota">
+            </div>
+
+            <div class="school-list"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Fajar Priantoro · Pendidikan Geografi
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
